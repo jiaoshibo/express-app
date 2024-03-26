@@ -9,6 +9,6 @@
         "moduleResolution": "Node",
         "baseUrl": "./"
     },
-    "include": ["src/**/*","src/**/*.log"],
+    "include": ["src/**/*","src/**/*.log", "public"],
     "exclude": ["node_modules"]
 }

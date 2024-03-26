@@ -1,7 +1,6 @@
 import express from 'express';
 import * as UserDao from '../dao/user';
 import { R } from '../common/R'
-import { log } from 'node:console';
 
 const router = express.Router();
 
@@ -10,12 +9,6 @@ const router = express.Router();
  */
 router.get('/user',async (_req:express.Request,res:express.Response)=>{
     let userList = await UserDao.getUserList();
-
-    if(_req.sessionStore.all){
-        _req.sessionStore.all((err, values) => {
-            log(values)
-        })
-    }
     res.send(R.success(userList))
 })
 

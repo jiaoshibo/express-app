@@ -24,7 +24,7 @@ const sessionStore = new MySQLStore(DBConfig)
 app.use(bodyParser.urlencoded({limit:'20mb',extended:true}));
 app.use(bodyParser.json({limit:'20mb'}));
 app.use(createExpressMiddleware);
-app.use(express.static(path.join(__dirname, './public')))
+app.use(express.static(path.join(__dirname, '../public')))
 app.use(cookieParser());
 app.use(cookieMiddleware);
 app.use(session.default({
